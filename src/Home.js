@@ -3,6 +3,7 @@ import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 
 import { requestHelloWorld } from "./actions";
+import config from "./config";
 
 class Home extends Component {
   componentDidMount() {
@@ -10,7 +11,11 @@ class Home extends Component {
   }
 
   render() {
-    return <h1>{this.props.helloWorld}</h1>;
+    return (
+      <h1>
+        {this.props.helloWorld} and {config.KEYS.KEY_ONE}
+      </h1>
+    );
   }
 }
 
