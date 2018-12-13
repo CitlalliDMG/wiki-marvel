@@ -2,27 +2,38 @@ import React, { Component } from "react";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 
-import { requestHelloWorld } from "./actions";
+import { requestApiData } from "./actions";
 import config from "./config";
 
 class Home extends Component {
   componentDidMount() {
-    this.props.requestHelloWorld();
+    this.props.requestApiData();
   }
 
-  render() {
-    return (
+  person = personData => (
+    <div key={personData.id.value}>
       <h1>
-        {this.props.helloWorld} and {config.KEYS.KEY_ONE}
+        {personData.name.first} {personData.name.last}
       </h1>
-    );
+      <p>{personData.gender}</p>
+      <img
+        src={personData.picture.medium}
+        alt={`photography of ${personData.name.first}`}
+      />
+      <p>{config.KEYS.KEY_ONE}</p>
+    </div>
+  );
+
+  render() {
+    const { results = [] } = this.props.data;
+    return <h1>{results.map(this.person)}</h1>;
   }
 }
 
-const mapStateToProps = state => ({ helloWorld: state.helloWorld });
+const mapStateToProps = state => ({ data: state.data });
 
 const mapDispatchToProps = dispatch =>
-  bindActionCreators({ requestHelloWorld }, dispatch);
+  bindActionCreators({ requestApiData }, dispatch);
 
 export default connect(
   mapStateToProps,
