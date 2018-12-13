@@ -1,11 +1,11 @@
 {
-  "main.js": "/wiki-marvel/static/js/main.8716e82c.chunk.js",
-  "main.js.map": "/wiki-marvel/static/js/main.8716e82c.chunk.js.map",
-  "static/js/1.9b2dbce2.chunk.js": "/wiki-marvel/static/js/1.9b2dbce2.chunk.js",
-  "static/js/1.9b2dbce2.chunk.js.map": "/wiki-marvel/static/js/1.9b2dbce2.chunk.js.map",
-  "runtime~main.js": "/wiki-marvel/static/js/runtime~main.435034a0.js",
-  "runtime~main.js.map": "/wiki-marvel/static/js/runtime~main.435034a0.js.map",
-  "index.html": "/wiki-marvel/index.html",
-  "precache-manifest.6b8e904f18d7fc65594e309aa280a2f5.js": "/wiki-marvel/precache-manifest.6b8e904f18d7fc65594e309aa280a2f5.js",
-  "service-worker.js": "/wiki-marvel/service-worker.js"
+  "main.js": "/wikimarvel/static/js/main.77282157.chunk.js",
+  "main.js.map": "/wikimarvel/static/js/main.77282157.chunk.js.map",
+  "static/js/1.b61fd7f3.chunk.js": "/wikimarvel/static/js/1.b61fd7f3.chunk.js",
+  "static/js/1.b61fd7f3.chunk.js.map": "/wikimarvel/static/js/1.b61fd7f3.chunk.js.map",
+  "runtime~main.js": "/wikimarvel/static/js/runtime~main.909fd099.js",
+  "runtime~main.js.map": "/wikimarvel/static/js/runtime~main.909fd099.js.map",
+  "index.html": "/wikimarvel/index.html",
+  "precache-manifest.ba49abfb81d8097d85ab83adc6619408.js": "/wikimarvel/precache-manifest.ba49abfb81d8097d85ab83adc6619408.js",
+  "service-worker.js": "/wikimarvel/service-worker.js"
 }

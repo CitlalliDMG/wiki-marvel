@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/3.6.3/workbox-sw.js");
 
 importScripts(
-  "/wiki-marvel/precache-manifest.6b8e904f18d7fc65594e309aa280a2f5.js"
+  "/wikimarvel/precache-manifest.ba49abfb81d8097d85ab83adc6619408.js"
 );
 
 workbox.clientsClaim();
@@ -28,7 +28,7 @@ self.__precacheManifest = [].concat(self.__precacheManifest || []);
 workbox.precaching.suppressWarnings();
 workbox.precaching.precacheAndRoute(self.__precacheManifest, {});
 
-workbox.routing.registerNavigationRoute("/wiki-marvel/index.html", {
+workbox.routing.registerNavigationRoute("/wikimarvel/index.html", {
   
   blacklist: [/^\/_/,/\/[^\/]+\.[^\/]+$/],
 });
