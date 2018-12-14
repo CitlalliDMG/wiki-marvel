@@ -12,7 +12,7 @@ const SignedInLinks = () => {
       </li>
       <li>
         <NavLink to="/" className="avatar">
-          US
+          <button className="logout-button">CD</button>
         </NavLink>
       </li>
     </ul>

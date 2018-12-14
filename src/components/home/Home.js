@@ -26,7 +26,17 @@ class Home extends Component {
 
   render() {
     const { results = [] } = this.props.data;
-    return <h1>{results.map(this.person)}</h1>;
+    return (
+      <main className="main-container">
+        <section>
+          <p>Aquí va a ir el buscador y el resultado de la busqueda</p>
+          <div>{results.map(this.person)}</div>
+        </section>
+        <aside>
+          <p>Aquí va a ir la colección que se esta armando</p>
+        </aside>
+      </main>
+    );
   }
 }
 

@@ -52,29 +52,61 @@ body {
 }
 
 .nav-links {
-  flex: 1;
+  flex: 4;
   display: flex;
   justify-content: flex-end;
+  align-items: center;
 }
 
 .nav-links ul {
   list-style-type: none;
 }
 
-.nav-links li {
+.nav-links ul li {
   display: inline;
   padding: 14px 16px;
 }
 
-.nav-links li a {
+.nav-links ul li:hover {
+  border-bottom: 2px solid red;
+}
+
+.nav-links ul li a {
   color: #b5b5b5;
   text-decoration: none;
 }
 
-.nav-links li:hover {
-  border-bottom: 2px solid red;
+.nav-links ul li a:hover {
+  color: #fff;
 }
 
-.nav-links li a:hover {
-  color: #fff;
+.logout-button {
+  padding: 8px 7px;
+  border-radius: 100%;
+  font-size: 1em;
+}
+
+.main-container {
+  grid-column-end: 3;
+  grid-column-start: 2;
+  grid-row-end: 3;
+  grid-row-start: 2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.main-container section,
+.main-container aside {
+  border: 1px solid #22262a;
+  text-align: center;
+  height: 80vh;
+}
+
+.main-container section {
+  flex: 3;
+}
+
+.main-container aside {
+  flex: 1;
 }

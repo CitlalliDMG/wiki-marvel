@@ -3,6 +3,7 @@ import { Link } from "react-router-dom";
 
 import Logo from "../../assets/Marvel_Comics_logo.png";
 import SignedUpLinks from "./SignInLinks";
+import SignedOutLinks from "./SignOutLinks";
 
 const Navbar = () => {
   return (
@@ -13,6 +14,7 @@ const Navbar = () => {
         </Link>
       </div>
       <nav className="nav-links">
+        <SignedOutLinks />
         <SignedUpLinks />
       </nav>
     </header>
