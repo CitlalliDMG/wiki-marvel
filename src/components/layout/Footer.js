@@ -2,7 +2,9 @@ import React from "react";
 const Footer = () => {
   return (
     <footer className="footer-container">
-      <p>Datos proporcionados por Marvel. © 2014 Marvel</p>
+      <a href="http://marvel.com">
+        Datos proporcionados por Marvel. © 2018 Marvel
+      </a>
     </footer>
   );
 };

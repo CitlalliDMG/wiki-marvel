@@ -3,40 +3,64 @@ import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 
 import { requestApiData } from "../../actions";
-import config from "../../config";
+import SearchField from "./SearchField";
 
 class Home extends Component {
+  constructor() {
+    super();
+    this.state = {
+      searchString: "",
+      searchResultList: [],
+      isLoaded: "waiting",
+      comics: [],
+      total: 0
+    };
+  }
+
   componentDidMount() {
     this.props.requestApiData();
   }
 
-  person = personData => (
-    <div key={personData.id.value}>
-      <h1>
-        {personData.name.first} {personData.name.last}
-      </h1>
-      <p>{personData.gender}</p>
+  // Get string to search
+  fromSearchField(inputSearch) {
+    this.setState({ searchString: inputSearch });
+  }
+
+  // Search by pokemon name
+  // async fromSearchByName() {
+  //   this.setState({ isLoaded: "loading", searchResultList: [] });
+  //   const pokemonData = await api.getByName(this.state.searchString);
+  //   this.setState({ searchResultList: pokemonData.cards });
+  //   this.setState({ isLoaded: "waiting" });
+  // }
+
+  comic = comicData => (
+    <div key={comicData.id}>
       <img
-        src={personData.picture.medium}
-        alt={`photography of ${personData.name.first}`}
+        src={`${comicData.thumbnail.path}/portrait_medium.${
+          comicData.thumbnail.extension
+        }`}
+        alt={comicData.title}
       />
-      <p>{config.KEYS.KEY_ONE}</p>
+      <p>{comicData.title}</p>
     </div>
   );
 
   render() {
-    const { results = [] } = this.props.data;
-    return (
-      <main className="main-container">
-        <section>
-          <p>Aquí va a ir el buscador y el resultado de la busqueda</p>
-          <div>{results.map(this.person)}</div>
-        </section>
-        <aside>
-          <p>Aquí va a ir la colección que se esta armando</p>
-        </aside>
-      </main>
-    );
+    const comicResults = this.props.data;
+    console.log(comicResults);
+    if (comicResults.length > 0) {
+      return (
+        <main className="main-container">
+          <SearchField getInputToSearch={this.fromSearchField.bind(this)} />
+          <section className="results-container">
+            <h1>Los cómics más recientes</h1>
+            {comicResults.map(this.comic)}
+          </section>
+        </main>
+      );
+    }
+    return <p>Cargando...</p>;
   }
 }
 
