@@ -1,11 +1,14 @@
 {
-  "main.js": "/wikimarvel/static/js/main.77282157.chunk.js",
-  "main.js.map": "/wikimarvel/static/js/main.77282157.chunk.js.map",
-  "static/js/1.b61fd7f3.chunk.js": "/wikimarvel/static/js/1.b61fd7f3.chunk.js",
-  "static/js/1.b61fd7f3.chunk.js.map": "/wikimarvel/static/js/1.b61fd7f3.chunk.js.map",
+  "main.css": "/wikimarvel/static/css/main.de15c544.chunk.css",
+  "main.js": "/wikimarvel/static/js/main.e302e032.chunk.js",
+  "main.js.map": "/wikimarvel/static/js/main.e302e032.chunk.js.map",
+  "static/js/1.8db47e56.chunk.js": "/wikimarvel/static/js/1.8db47e56.chunk.js",
+  "static/js/1.8db47e56.chunk.js.map": "/wikimarvel/static/js/1.8db47e56.chunk.js.map",
   "runtime~main.js": "/wikimarvel/static/js/runtime~main.909fd099.js",
   "runtime~main.js.map": "/wikimarvel/static/js/runtime~main.909fd099.js.map",
+  "static/media/Marvel_Comics_logo.png": "/wikimarvel/static/media/Marvel_Comics_logo.ee150a31.png",
+  "static/css/main.de15c544.chunk.css.map": "/wikimarvel/static/css/main.de15c544.chunk.css.map",
   "index.html": "/wikimarvel/index.html",
-  "precache-manifest.ba49abfb81d8097d85ab83adc6619408.js": "/wikimarvel/precache-manifest.ba49abfb81d8097d85ab83adc6619408.js",
+  "precache-manifest.2fa0f0b56cf2ae538848df2029493ac5.js": "/wikimarvel/precache-manifest.2fa0f0b56cf2ae538848df2029493ac5.js",
   "service-worker.js": "/wikimarvel/service-worker.js"
 }
