@@ -2,8 +2,8 @@ import React, { Component } from "react";
 import { bindActionCreators } from "redux";
 import { connect } from "react-redux";
 
-import { requestApiData } from "./actions";
-import config from "./config";
+import { requestApiData } from "../../actions";
+import config from "../../config";
 
 class Home extends Component {
   componentDidMount() {
