@@ -15,14 +15,17 @@ class SearchField extends Component {
   render() {
     return (
       <form className="center-form" onSubmit={this.onSubmit.bind(this)}>
+        <label for="comic-search">¿Qué cómic buscas?</label>
         <input
+          name="comic-search"
           className="search-bar"
+          id="comic-search"
           value={this.props.initialName}
           onChange={this.inputSearch.bind(this)}
           type="text"
-          placeholder="Ingresa el comic buscas"
+          placeholder="Ingresa el cómic buscas"
         />
-        <button className="search" type="submit">
+        <button id="searchbutton" className="search-button" type="submit">
           Buscar
         </button>
       </form>

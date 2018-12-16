@@ -3,7 +3,7 @@ const Footer = () => {
   return (
     <footer className="footer-container">
       <a href="http://marvel.com">
-        Datos proporcionados por Marvel. © 2018 Marvel
+        Datos proporcionados por Marvel. <br /> © 2018 Marvel
       </a>
     </footer>
   );
