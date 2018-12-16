@@ -35,14 +35,17 @@ class Home extends Component {
   // }
 
   comic = comicData => (
-    <div key={comicData.id}>
+    <div key={comicData.id} className="comic">
       <img
-        src={`${comicData.thumbnail.path}/portrait_medium.${
+        className="comic-image"
+        src={`${comicData.thumbnail.path}/portrait_fantastic.${
           comicData.thumbnail.extension
         }`}
         alt={comicData.title}
       />
-      <p>{comicData.title}</p>
+      <div className="comic-info">
+        <p>{comicData.title}</p>
+      </div>
     </div>
   );
 
@@ -54,13 +57,17 @@ class Home extends Component {
         <main className="main-container">
           <SearchField getInputToSearch={this.fromSearchField.bind(this)} />
           <section className="results-container">
-            <h1>Los cómics más recientes</h1>
+            <h1 className="title">Los cómics más recientes</h1>
             {comicResults.map(this.comic)}
           </section>
         </main>
       );
     }
-    return <p>Cargando...</p>;
+    return (
+      <main className="main-container">
+        <p>Cargando ...</p>
+      </main>
+    );
   }
 }
 

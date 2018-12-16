@@ -5,10 +5,11 @@ import config from "../config";
 
 const URL = () => {
   const BASE_URL_1 = "https://gateway.marvel.com:443/v1/public/";
-  const QUERY = "comics?format=comic&formatType=comic&dateDescriptor=lastWeek";
+  const QUERY = "comics?format=comic&formatType=comic&dateDescriptor=thisWeek";
   const timestamp = new Date().getTime();
   const HASH = crypto.MD5(timestamp + config.privateKey + config.publicKey);
   const AUTH = `&ts=${timestamp}&apikey=${config.publicKey}&hash=${HASH}`;
+  console.log(AUTH);
   return `${BASE_URL_1}${QUERY}${AUTH}`;
 };
 
