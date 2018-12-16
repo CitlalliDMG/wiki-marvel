@@ -8,19 +8,19 @@ self.__precacheManifest = [
     "url": "/wikimarvel/static/js/runtime~main.909fd099.js"
   },
   {
-    "revision": "3069f2ca493f2eb559e4",
-    "url": "/wikimarvel/static/js/main.3069f2ca.chunk.js"
+    "revision": "b1ae68727ef78ea6fd39",
+    "url": "/wikimarvel/static/js/main.b1ae6872.chunk.js"
   },
   {
     "revision": "c8ceb18f350e08dae801",
     "url": "/wikimarvel/static/js/1.c8ceb18f.chunk.js"
   },
   {
-    "revision": "3069f2ca493f2eb559e4",
+    "revision": "b1ae68727ef78ea6fd39",
     "url": "/wikimarvel/static/css/main.4c20faa0.chunk.css"
   },
   {
-    "revision": "aadc8c6c3bc72765dd0a9c7a077548d3",
+    "revision": "a07bea9af24c35dda4d0cab2df01cdd1",
     "url": "/wikimarvel/index.html"
   }
 ];
