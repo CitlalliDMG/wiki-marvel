@@ -15,7 +15,9 @@ class SearchField extends Component {
   render() {
     return (
       <form className="center-form" onSubmit={this.onSubmit.bind(this)}>
-        <label htmlFor="comic-search">¿Qué cómic buscas?</label>
+        <label htmlFor="comic-search" className="center-label">
+          ¿Qué cómic buscas?
+        </label>
         <input
           name="comic-search"
           className="search-bar"

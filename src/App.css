@@ -36,6 +36,17 @@ body {
   grid-column-end: 4;
 }
 
+.container {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+}
+
+.container-content {
+  margin: auto;
+  text-align: center;
+}
+
 /* HEADER */
 
 .header-container {
@@ -107,7 +118,7 @@ footer a:hover {
   flex: 1;
 }
 
-/* SEARCH FORM */
+/* FORMS */
 
 .center-form {
   display: grid;
@@ -118,8 +129,12 @@ footer a:hover {
   margin: 1em auto;
 }
 
-.center-form label {
+.center-label {
   text-align: center;
+}
+
+.center-form input {
+  font-size: 1em;
 }
 
 .search-bar,
@@ -141,6 +156,10 @@ footer a:hover {
   color: #fff;
   text-transform: uppercase;
   padding: 1em 1.5em;
+}
+
+.center-vertically {
+  margin: auto 0;
 }
 
 /* RESULTS CONTAINER */
