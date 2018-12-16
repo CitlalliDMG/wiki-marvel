@@ -13,13 +13,13 @@ class App extends Component {
   render() {
     return (
       <Router>
-        <div className="main-grid">
-          <Navbar />
-          <Provider store={store}>
+        <Provider store={store}>
+          <div className="main-grid">
+            <Navbar />
             <Home />
-          </Provider>
-          <Footer />
-        </div>
+            <Footer />
+          </div>
+        </Provider>
       </Router>
     );
   }
