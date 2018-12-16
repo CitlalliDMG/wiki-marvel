@@ -18,7 +18,7 @@ import * as routes from "./constants/routes";
 class App extends Component {
   render() {
     return (
-      <Router>
+      <Router basename={process.env.PUBLIC_URL}>
         <Provider store={store}>
           <div className="main-grid">
             <Navbar />
