@@ -12,6 +12,9 @@ const SignedOutLinks = () => {
       <li>
         <NavLink to={routes.SIGN_IN}>Inicia sesión</NavLink>
       </li>
+      <li>
+        <NavLink to={routes.COLLECTIONS}>Mis colecciones</NavLink>
+      </li>
     </ul>
   );
 };
