@@ -7,13 +7,13 @@ const SignedOutLinks = () => {
   return (
     <ul>
       <li>
-        <NavLink to={routes.SIGN_UP}>Regístrate</NavLink>
+        <NavLink to={routes.SIGN_UP}>Sign Up</NavLink>
       </li>
       <li>
-        <NavLink to={routes.SIGN_IN}>Inicia sesión</NavLink>
+        <NavLink to={routes.SIGN_IN}>Sign In</NavLink>
       </li>
       <li>
-        <NavLink to={routes.COLLECTIONS}>Mis colecciones</NavLink>
+        <NavLink to={routes.COLLECTIONS}>My Collections</NavLink>
       </li>
     </ul>
   );

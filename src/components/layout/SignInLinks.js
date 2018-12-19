@@ -7,10 +7,10 @@ const SignedInLinks = () => {
   return (
     <ul>
       <li>
-        <NavLink to={routes.COLLECTIONS}>Mis colecciones</NavLink>
+        <NavLink to={routes.COLLECTIONS}>My Collections</NavLink>
       </li>
       <li>
-        <NavLink to="/">Cerrar sesión</NavLink>
+        <NavLink to="/">Sign Out</NavLink>
       </li>
       <li>
         <NavLink to="/" className="avatar logout-button">

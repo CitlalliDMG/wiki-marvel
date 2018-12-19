@@ -12,15 +12,15 @@ class CollectionsDashboard extends Component {
 
     return (
       <main className="main-container center-vertically">
-        <h1>Mis colecciones:</h1>
+        <h1>My collections:</h1>
         <CollectionList collections={collections} />
       </main>
     );
   }
 }
 
-const mapStateToProps = state => ({
-  collections: state.collectionReducer.collections
+const mapStateToProps = appState => ({
+  collections: appState.collectionReducer.collections
 });
 
 export default connect(mapStateToProps)(CollectionsDashboard);
