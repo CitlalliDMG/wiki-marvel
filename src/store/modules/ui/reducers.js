@@ -1,9 +1,68 @@
+import { handleAction, combineActions } from "redux-actions";
+
+import {
+  REQUEST_COMICS_DATA,
+  RECEIVE_COMICS_DATA,
+  requestComicsData,
+  receiveComicsData
+} from "./actions";
+
+const defaultState = {
+  loading: null
+};
+
+export const ui = handleAction(
+  combineActions(requestComicsData, receiveComicsData),
+  {
+    next(state, action) {
+      let newState = {};
+      switch (action.type) {
+        case REQUEST_COMICS_DATA:
+          newState = {
+            ...state,
+            loading: true
+          };
+
+          newState.comicsData = action.payload;
+          return newState;
+
+        case RECEIVE_COMICS_DATA:
+          newState = {
+            ...state,
+            loading: false
+          };
+
+          newState.comicsData = action.payload;
+          return newState;
+        default:
+          return state;
+      }
+    },
+    throw(state, action) {
+      switch (action.type) {
+        case RECEIVE_COMICS_DATA:
+          let newState = {
+            ...state
+          };
+
+          newState.comicsDataError = action.payload;
+
+          return newState;
+
+        default:
+          return state;
+      }
+    }
+  },
+  defaultState
+);
+
 const initState = {
   collections: [
     {
       id: "1",
-      collectionName: "Capitan América",
-      description: "Mis cómics del Capitan América",
+      collectionName: "Captain Amarica",
+      description: "My comics of Captain America",
       total: 2,
       comics: [
         {
@@ -454,8 +513,8 @@ const initState = {
     },
     {
       id: "2",
-      collectionName: "Viuda Negra",
-      description: "Wish List de cómics de la Viuda Negra",
+      collectionName: "Black Widow",
+      description: "Black Widow Wish List",
       total: 2,
       comics: [
         {
@@ -766,8 +825,6 @@ const initState = {
   ]
 };
 
-const collectionReducer = (state = initState, action) => {
-  return state;
+export const collectionReducer = (appState = initState) => {
+  return appState;
 };
-
-export default collectionReducer;

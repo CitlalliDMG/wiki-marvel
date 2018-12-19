@@ -1,8 +1,6 @@
 import crypto from "crypto-js";
 import config from "../config";
 
-// const BASE_URL = "https://randomuser.me/api";
-
 const URL = () => {
   const BASE_URL_1 = "https://gateway.marvel.com:443/v1/public/";
   const QUERY = "comics?format=comic&formatType=comic&dateDescriptor=thisWeek";
@@ -13,17 +11,33 @@ const URL = () => {
   return `${BASE_URL_1}${QUERY}${AUTH}`;
 };
 
+const urlTitle = title => {
+  const BASE_URL_1 = "https://gateway.marvel.com:443/v1/public/";
+  const QUERY = `comics?format=comic&formatType=comic&noVariants=true&title=${title}&orderBy=title`;
+  const timestamp = new Date().getTime();
+  const HASH = crypto.MD5(timestamp + config.privateKey + config.publicKey);
+  const AUTH = `&ts=${timestamp}&apikey=${config.publicKey}&hash=${HASH}`;
+  return `${BASE_URL_1}${QUERY}${AUTH}`;
+};
+
 class api {
   fetchData = async () => {
     try {
-      // const response = await fetch(`${BASE_URL}`);
-      // const data = await response.json();
-      const response2 = await fetch(URL());
-      const rawData = await response2.json();
+      const response = await fetch(URL());
+      const rawData = await response.json();
       const data = rawData.data.results;
-      // console.log(data);
+      return data;
+    } catch (e) {
+      let message = e;
+      return message;
+    }
+  };
+  getByTitle = async title => {
+    try {
+      const response = await fetch(urlTitle(title));
+      const rawData = await response.json();
+      const data = rawData.data;
       console.log(data);
-      // return data;
       return data;
     } catch (e) {
       let message = e;
