@@ -15,9 +15,9 @@ const URL = () => {
   return `${BASE_URL_1}${QUERY}${AUTH}`;
 };
 
-const urlTitle = title => {
+const urlTitle = (title, offset) => {
   const BASE_URL_1 = "https://gateway.marvel.com:443/v1/public/";
-  const QUERY = `comics?format=comic&formatType=comic&noVariants=true&title=${title}&orderBy=title`;
+  const QUERY = `comics?format=comic&formatType=comic&noVariants=true&title=${title}&orderBy=-onsaleDate&limit=10&offset=${offset}`;
   const timestamp = new Date().getTime();
   const HASH = crypto.MD5(
     timestamp + configuration.privateKey + configuration.publicKey
@@ -42,7 +42,7 @@ class api {
   };
   getByTitle = async title => {
     try {
-      const response = await fetch(urlTitle(title));
+      const response = await fetch(urlTitle(title, 0));
       const rawData = await response.json();
       const data = rawData.data;
       console.log(data);
@@ -50,6 +50,14 @@ class api {
     } catch (e) {
       let message = e;
       return message;
+    }
+  };
+  newEntry = dataCollection => {
+    try {
+      console.log(dataCollection);
+      return dataCollection;
+    } catch (e) {
+      return e;
     }
   };
 }

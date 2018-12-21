@@ -19,6 +19,7 @@ class SearchField extends Component {
 
   onSubmit = event => {
     event.preventDefault();
+    console.log(this.state);
     this.props.requestComicsData(this.state.comicSearch);
   };
 

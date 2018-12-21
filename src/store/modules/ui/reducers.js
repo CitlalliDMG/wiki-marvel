@@ -34,6 +34,7 @@ export const ui = handleAction(
 
           newState.comicsData = action.payload;
           return newState;
+
         default:
           return state;
       }
@@ -825,6 +826,6 @@ const initState = {
   ]
 };
 
-export const collectionReducer = (appState = initState) => {
+export const collectionReducer = (appState = initState, action) => {
   return appState;
 };

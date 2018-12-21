@@ -11,8 +11,8 @@ class CollectionsDashboard extends Component {
     console.log(collections);
 
     return (
-      <main className="main-container center-vertically">
-        <h1>My collections:</h1>
+      <main className="main-container center-vertically margin-one">
+        <h1 className="center-label">My collections:</h1>
         <CollectionList collections={collections} />
       </main>
     );
