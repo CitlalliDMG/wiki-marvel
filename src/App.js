@@ -8,6 +8,7 @@ import Home from "./components/home/Home";
 import SignIn from "./components/auth/SignIn";
 import SignUp from "./components/auth/SignUp";
 import ComicDetails from "./components/home/ComicDetails";
+import CreateCollectionContainer from "./components/collection/CreateCollectionContainer";
 import CollectionsDashboard from "./components/collection/CollectionsDashboard";
 import Page404 from "./components/page404/Page404";
 import Footer from "./components/layout/Footer";
@@ -24,6 +25,11 @@ const App = ({ history }) => {
           <Route exact path={routes.COMIC} component={ComicDetails} />
           <Route exact path={routes.SIGN_IN} component={SignIn} />
           <Route exact path={routes.SIGN_UP} component={SignUp} />
+          <Route
+            exact
+            path={routes.NEW_COLLECTION}
+            component={CreateCollectionContainer}
+          />
           <Route
             exact
             path={routes.COLLECTIONS}

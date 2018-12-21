@@ -10,11 +10,16 @@ const CollectionSummary = ({ collection }) => {
       <p className="bold-text"> Number of comics: </p>
       <p className="text">{collection.total}</p>
       <p className="bold-text"> Comics in the collection: </p>
-      {collection.comics.map(comic => {
-        return (
-          <p key={`${collection.collectionName} ${comic.id}`}>{comic.title}</p>
-        );
-      })}
+      {collection.comics &&
+        collection.comics.map(comic => {
+          return (
+            <p key={`${collection.collectionName} ${comic.id}`}>
+              {comic.title}
+            </p>
+          );
+        })}
+      <button className="search-button margin-collection-button">Edit</button>
+      <button className="search-button">Delete</button>
     </article>
   );
 };

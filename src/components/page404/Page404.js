@@ -5,8 +5,8 @@ const Page404 = () => {
   return (
     <main className="main-container container">
       <div className="container-content">
-        <h1>Opps... Al parecer algo ha salido mal </h1>
-        <Link to="/">Regresar al inicio</Link>
+        <h1>Opps... Apparently something has gone wrong </h1>
+        <Link to="/">Back to home</Link>
       </div>
     </main>
   );

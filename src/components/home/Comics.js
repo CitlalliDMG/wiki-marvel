@@ -1,18 +1,24 @@
 import React from "react";
 import { connect } from "react-redux";
+import { NavLink } from "react-router-dom";
+
+import * as routes from "../../constants/routes";
 
 const comic = comicData => (
   <div key={comicData.id} className="comic">
-    <img
-      className="comic-image"
-      src={`${comicData.thumbnail.path}/portrait_fantastic.${
-        comicData.thumbnail.extension
-      }`}
-      alt={comicData.title}
-    />
-    <div className="comic-info">
-      <p>{comicData.title}</p>
-    </div>
+    <NavLink to={routes.COMIC + comicData.id}>
+      <img
+        className="comic-image"
+        src={`${comicData.thumbnail.path}/portrait_fantastic.${
+          comicData.thumbnail.extension
+        }`}
+        alt={comicData.title}
+      />
+      <div className="comic-info">
+        <p>{comicData.title}</p>
+        <p>Print Price: ${comicData.prices[0].price} USD</p>
+      </div>
+    </NavLink>
   </div>
 );
 

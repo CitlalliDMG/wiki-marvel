@@ -226,6 +226,14 @@ footer a:hover {
   margin-bottom: 1em;
 }
 
+.margin-collection-button {
+  margin: 1em 1em 0 0;
+}
+
+.margin-one {
+  margin: 1em 0;
+}
+
 /* LOADER */
 
 .lds-spinner {
@@ -322,6 +330,24 @@ footer a:hover {
   }
 }
 
+/* COMIC DETAILS */
+
+.comic-details {
+  display: flex;
+  flex-flow: wrap;
+  flex-direction: column;
+  margin: 1em 0;
+}
+
+.comic-details-section {
+  flex: 1;
+  margin: 1em;
+}
+
+.uppercase {
+  text-transform: uppercase;
+}
+
 /* FOOTER */
 
 .footer-container {
@@ -334,6 +360,13 @@ footer a:hover {
 }
 
 /* MEDIA QUERIES */
+
+/* Screen larger than 768px */
+@media screen and (min-width: 768px) {
+  .comic-details {
+    flex-direction: row;
+  }
+}
 
 /* Screen larger than 600px */
 
@@ -358,8 +391,8 @@ footer a:hover {
   }
 
   .collection-list {
-    grid-template-columns: 1fr 1fr;
-    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr 1fr;
+    /* grid-auto-flow: column; */
   }
 }
 

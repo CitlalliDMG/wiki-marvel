@@ -20,7 +20,7 @@ class SignIn extends Component {
   render() {
     return (
       <div className="main-container center-vertically">
-        <h1 className="container-content">Ingresa a Wiki Comics</h1>
+        <h1 className="container-content">Sign in to Wiki Comics</h1>
         <form className="center-form" onSubmit={this.handleSubmit}>
           <input
             name="email"
@@ -28,7 +28,7 @@ class SignIn extends Component {
             id="email"
             onChange={this.handleChange}
             type="email"
-            placeholder="Correo"
+            placeholder="Email"
             aria-label="Email"
           />
           <input
@@ -37,7 +37,7 @@ class SignIn extends Component {
             id="password"
             onChange={this.handleChange}
             type="password"
-            placeholder="Contraseña"
+            placeholder="Password"
             aria-label="Password"
           />
           <button
@@ -46,7 +46,7 @@ class SignIn extends Component {
             type="submit"
             aria-label="Sign In Button"
           >
-            Entrar
+            Sign In
           </button>
         </form>
       </div>

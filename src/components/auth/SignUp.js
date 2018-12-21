@@ -22,7 +22,7 @@ class SignUp extends Component {
   render() {
     return (
       <div className="main-container center-vertically">
-        <h1 className="container-content">Crea una cuenta</h1>
+        <h1 className="container-content">Create an Account</h1>
         <form className="center-form" onSubmit={this.handleSubmit}>
           <input
             name="firstName"
@@ -30,7 +30,7 @@ class SignUp extends Component {
             id="firstName"
             onChange={this.handleChange}
             type="text"
-            placeholder="Nombre"
+            placeholder="First Name"
             aria-label="First Name"
           />
           <input
@@ -39,7 +39,7 @@ class SignUp extends Component {
             id="lastName"
             onChange={this.handleChange}
             type="text"
-            placeholder="Apellidos"
+            placeholder="Last Name"
             aria-label="Last Name"
           />
           <input
@@ -48,7 +48,7 @@ class SignUp extends Component {
             id="email"
             onChange={this.handleChange}
             type="email"
-            placeholder="Correo"
+            placeholder="Email"
             aria-label="Email"
           />
           <input
@@ -57,7 +57,7 @@ class SignUp extends Component {
             id="password"
             onChange={this.handleChange}
             type="password"
-            placeholder="Contraseña"
+            placeholder="Password"
             aria-label="Password"
           />
           <button
@@ -66,7 +66,7 @@ class SignUp extends Component {
             className="search-button"
             type="submit"
           >
-            Registrar
+            Sign Up
           </button>
         </form>
       </div>
