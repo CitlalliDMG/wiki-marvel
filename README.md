@@ -18,6 +18,8 @@ Try the demo [here](https://citlallidmg.github.io/wikimarvel/)
 - Redux Saga
 - Redux Form
 - Redux Devtools Extension
+- CSS Grid
+- Flexbox
 
 ## API consumed
 
