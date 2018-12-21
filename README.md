@@ -75,6 +75,6 @@ Build and deploy the app:
 $ npm run deploy
 ```
 
-## Credits
+## Author
 
 - Developed by [Citlalli Del Moral](https://github.com/CitlalliDMG)

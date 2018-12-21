@@ -1,8 +1,10 @@
 import React from "react";
 import { connect } from "react-redux";
 import { NavLink } from "react-router-dom";
+import { bindActionCreators } from "redux";
 
 import * as routes from "../../constants/routes";
+import { requestComicsData } from "../../store/modules/ui/actions";
 
 const comic = comicData => (
   <div key={comicData.id} className="comic">
@@ -22,6 +24,10 @@ const comic = comicData => (
   </div>
 );
 
+const moreComics = () => {
+  alert("Functionality available soon");
+};
+
 const Comics = ({ comicsData, loading }) => {
   return loading === false && comicsData ? (
     <section className="results-container">
@@ -33,6 +39,17 @@ const Comics = ({ comicsData, loading }) => {
           There are no comics with that title. <br /> Please, try again.
         </p>
       )}
+      {comicsData.results.length ? (
+        <div className="button-container">
+          <button
+            className="load-more-button"
+            type="button"
+            onClick={moreComics}
+          >
+            Load more
+          </button>
+        </div>
+      ) : null}
     </section>
   ) : null;
 };
@@ -45,7 +62,18 @@ const mapStateToProps = appState => {
   };
 };
 
+const mapDispatchToProps = dispatch => {
+  return {
+    ...bindActionCreators(
+      {
+        requestComicsData
+      },
+      dispatch
+    )
+  };
+};
+
 export default connect(
   mapStateToProps,
-  null
+  mapDispatchToProps
 )(Comics);

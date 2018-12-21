@@ -203,6 +203,17 @@ footer a:hover {
   margin-top: 2px;
 }
 
+.button-container {
+  width: 100%;
+  margin-bottom: 2em;
+}
+
+.load-more-button {
+  background-color: #c81526;
+  color: #fff;
+  text-transform: uppercase;
+  padding: 1em 1.5em;
+}
 /* COLLECTIONS */
 
 .collection-list {
