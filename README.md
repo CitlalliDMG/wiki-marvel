@@ -1,4 +1,4 @@
-# Post app
+# Marvel Wiki Comics
 
 Project to build a wiki app to find and save the user favourite comic data from the Marvel API
 
@@ -9,7 +9,7 @@ Try the demo [here](https://citlallidmg.github.io/wikimarvel/)
 - Search of comics by its title
 - Shows details of the selected comic
 - Show a simulation of the process to create a new collection of comics
-- Muestra las colecciones "guardadas"
+- Show the "saved" collections
 
 ## Stack
 
